@@ -13,8 +13,8 @@ namespace studentTest
             StudentManagement management = new StudentManagement();
             management.Students = new System.Collections.Generic.List<Student>();
             management.Students.Add(new Student() { Name = "student test", Gender = Gender.M, StudenType = new StudentType() { Description = "Kinder" }, LastUpdate = DateTime.Now });
-            management.CreateNewStudent("Kinder","Mary",Gender.F);
-            var totalStudents=management.Students.FindAll(x => x.Name.Equals("Mary"));
+            management.CreateNewStudent("Kinder", "Mary", Gender.F);
+            var totalStudents = management.Students.FindAll(x => x.Name.Equals("Mary"));
             Assert.IsTrue(totalStudents.Count >= 1);
         }
 
