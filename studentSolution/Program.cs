@@ -15,6 +15,7 @@ namespace studentSolution
 
             if (args[1].ToLower().Contains("name"))
             {
+                //name
                 management.LoadStudentsFromCSV(args[0]);
                 string nameToSearch = args[1].Split('=')[1];
                 List<Student> names = management.SearchByName(nameToSearch);
