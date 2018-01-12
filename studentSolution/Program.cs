@@ -12,9 +12,9 @@ namespace studentSolution
         static void Main(string[] args)
         {
             StudentManagement management = new StudentManagement();
+
             if (args[1].ToLower().Contains("name"))
             {
-                //name
                 management.LoadStudentsFromCSV(args[0]);
                 string nameToSearch = args[1].Split('=')[1];
                 List<Student> names = management.SearchByName(nameToSearch);
@@ -55,7 +55,6 @@ namespace studentSolution
 
         private static void print(List<Student> listStudents)
         {
-            //
             foreach (var item in listStudents)
             {
                 Console.WriteLine(string.Format("{0},{1},{2},{3}", item.StudenType.Description, item.Name, item.Gender, ShowTimeStamp(item.LastUpdate)));
@@ -64,7 +63,6 @@ namespace studentSolution
 
         private static string ShowTimeStamp(DateTime d)
         {
-            //
             return string.Format("{0}{1}{2}{3}{4}{5}", d.Year, d.Month, d.Day, d.Hour, d.Minute, d.Second);
         }
     }

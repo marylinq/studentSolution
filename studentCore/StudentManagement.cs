@@ -54,7 +54,7 @@ namespace studentCore
         public List<Student> SearchByGenderAndType(string gender, string type)
         {
             Gender g = (Gender)Enum.Parse(typeof(Gender), gender);
-            return Students.Where(x => x.StudenType.Description.ToLower().Equals(type.ToLower()) && x.Gender == g).OrderByDescending(x => x.LastUpdate).ToList();
+            return Students.Where(x => x.StudenType.Description.ToLower().Equals(type.ToLower()) && x.Gender==g).OrderByDescending(x => x.LastUpdate).ToList();
         }
 
         public void CreateNewStudent(string type, string name, Gender gender)
@@ -62,7 +62,7 @@ namespace studentCore
             Student newStudent = new Student();
             newStudent.StudenType = new StudentType() { Description = type };
             newStudent.Name = name;
-            newStudent.Gender = gender;
+            newStudent.Gender =  gender;
             newStudent.LastUpdate = DateTime.Now;
             Students.Add(newStudent);
         }

@@ -14,5 +14,5 @@ namespace studentCore
         public DateTime LastUpdate { get; set; }
     }
 
-    public enum Gender { F, M };
+    public enum Gender {F, M};
 }
