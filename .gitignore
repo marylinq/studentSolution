@@ -6,6 +6,8 @@
 /studentCore/obj/Debug
 /studentSolution/bin
 /studentSolution/obj
+/studentTest/bin
+/studentTest/obj
 *.obj
 *.exe
 *.pdb
